@@ -1,0 +1,17 @@
+import time
+import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+
+#윈도우 cmd 라이버리
+import os
+from tkinter import filedialog
+import tkinter
+
+import threading
+
+url = "http://anyang-anyang.ktcdn.co.kr/신학과/조영호/창조와진화/13-1 진화론적 유신론.mp4"
+response = requests.get(url)
+with open('다운로드.mp4', 'wb') as f:
+    f.write(response.content)
